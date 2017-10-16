@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #clickme {
+            width: 300px;
+            border: 1px solid purple;
+            padding: 3px;
+            cursor: pointer;
+            background-color: red;
+            color: aqua;
+            border: 5px solid blue;
+        }
+        
+        #result {
+            background-color: red;
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="clickme">
+        ===>Ну попробуй клацнуть, возможны травмы...
+    </div>
+    <img id="robot" src="img/111.jpg" alt="" />
+    <div id="result"></div>
+
+    <script>
+        $('#clickme').click(function() {
+            $('#robot').hide('slow', function() {
+                $('#result').html("...Но тебя жёстко наебали програмисты<br>" +
+                    "Ты ожидала чудо, но чудо будет в среду<br>" +
+                    "Скоро тебя ожидает сюрприз!");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
